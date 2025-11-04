@@ -1,4 +1,4 @@
-# AGORA v2 - Graph-Backed Question Answering System
+# AGORA - Graph-Backed Question Answering System
 
 A sophisticated AI system that answers complex questions by building a knowledge graph from multimodal sources (text and video), then using graph-based ranking to synthesize comprehensive answers.
 
