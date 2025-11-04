@@ -1,0 +1,28 @@
+# Core Dependencies
+streamlit>=1.24.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+networkx>=3.0
+
+# LLM and AI APIs
+openai>=2.6.1
+parallel-web
+
+# YouTube and Video Processing
+google-api-python-client>=2.186.0
+youtube-transcript-api>=1.2.3
+yt-dlp>=2025.10.22
+pytube>=15.0.0
+
+# NLP and Embeddings
+sentence-transformers>=5.1.2
+scikit-learn>=1.7.2
+torch>=2.9.0
+transformers>=4.57.1
+
+# Utilities
+requests>=2.32.5
+
+# Optional (for visualization)
+matplotlib>=3.7.0
+
