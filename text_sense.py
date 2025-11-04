@@ -47,7 +47,7 @@ def get_text_and_events(entity: str, user_query: str):
 
     print(f"[TextSense] Running task for events...")
     task_run_events = client.task_run.create(
-            input=f"Entity: {entity} \n User Query: {user_query}", 
+            input=f"Entity: {entity}", 
             task_spec={
               "output_schema": "The official name of the company's recent and important keynote, press release, or major product launch with the year and month. The event should be related to the user query and the entity. Bigger and detailed events are preferred. e.g., 'Q4 2025 Earnings Call', 'Product Launch' as a string"
             },

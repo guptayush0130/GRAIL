@@ -31,10 +31,9 @@ def summarize_transcript(transcript: str, user_query: str, event_name: str) -> s
 
 Instructions:
 - Extract key facts, announcements, and details that relate to the user's query
-- Focus on concrete information (products, numbers, partnerships, dates, etc.)
 - Ignore irrelevant content, introductions, and off-topic discussions
 - Keep the summary concise but informative (200-500 words)
-- If the transcript contains nothing relevant to the query, return "No relevant information found"
+- If the transcript contains nothing relevant to the query, return a blank string
 
 Provide your focused summary:"""
 
@@ -43,12 +42,12 @@ Provide your focused summary:"""
             model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": prompt},
-                {"role": "user", f"content": "User Query: {user_query} \n Video Event: {event_name} \n Video Transcript: {transcript}"}
+                {"role": "user", "content": f"User Query: {user_query} \n Video Event: {event_name} \n Video Transcript: {transcript}"}
             ],
-            temperature=0.3,
         )
         
         summary = response.choices[0].message.content.strip()
+        print(summary)
         print(f"[Janus] Summary generated ({len(summary)} chars)")
         return summary
         
@@ -99,7 +98,6 @@ def transcribe_video(video_id: str) -> str | None:
         # Clean up newlines and extra spaces
         full_transcript = " ".join(full_transcript.replace("\n", " ").split())
         print(f"[Janus] ...Fast transcription successful.")
-        print(f"[Janus] ...Full transcript: {full_transcript}")
         return full_transcript
         
     except Exception as e:

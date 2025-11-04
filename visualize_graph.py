@@ -146,7 +146,8 @@ if __name__ == "__main__":
     query = "What are Apple's latest AI developments?"
     
     print(f"Running query: {query}\n")
-    response = run(query, max_nodes=3, max_depth=1)
+    response = run(query, max_nodes=10, max_depth=2)
+    print(response.final_answer)
     
     print("\n" + "="*80)
     print("Visualizing Graph...")

@@ -52,11 +52,8 @@ class GraphBuilder:
             self.graph.add_node(current_entity, combined_context=combined_context, depth=current_depth)
             print(f"[GraphBuilder] Added node '{current_entity}' to graph (Total: {len(self.graph.nodes)})")
             
-            if len(self.graph.nodes) >= self.max_nodes:
-                print(f"[GraphBuilder] Reached max nodes ({self.max_nodes}), stopping expansion.")
-                break
             
-            if current_depth < self.max_depth:
+            if current_depth < self.max_depth and len(self.graph.nodes) < self.max_nodes:
                 new_entities = entity_sense.get_entities(combined_context, user_query, current_entity)
                 
                 if new_entities:

@@ -18,7 +18,7 @@ Based on the user's query and the context above, identify the TOP 3-5 most relev
 
 Requirements:
 - Return ONLY entities that are DIFFERENT from the current entity
-- Prioritize entities that are directly mentioned in the context
+- Use only the entities that are directly mentioned in the context
 - Focus on entities most relevant to the user's query
 - Entities should be companies, products, people, or initiatives
 - Return as a valid JSON array of strings
