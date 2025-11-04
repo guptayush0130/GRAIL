@@ -4,7 +4,7 @@ A sophisticated AI system that answers complex questions by building a knowledge
 
 ## Overview
 
-AGORA v2 transforms a user question into a synthesized, graph-backed answer through a 7-stage pipeline:
+AGORA transforms a user question into a synthesized, graph-backed answer through a 7-stage pipeline:
 
 1. **Query Input** - Receive user question
 2. **Entity Extraction** - Identify seed entity using LLM
